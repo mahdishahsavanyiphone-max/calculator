@@ -14,7 +14,7 @@ def sign(x):
 
 def equal():
     try:
-        equation.set(eval(equation.get())) # code try ro angam bede agar be khata khordy code except ra angam bede
+        equation.set(eval(equation.get()))
     except:
         equation.set("Error")
 
@@ -27,8 +27,7 @@ root.title("calculater")
 equation=StringVar()
 
 lbl=Label(textvariable=equation,font=("times new roman",14,"bold"),fg="#0091FF",bg="#e4e3e3",padx=10,pady=10)
-lbl.grid(columnspan=4,sticky="we") # n(North)=>up , s(South)=>down , e(East)=>right , w(West)=>left  
-#agar chand gahat benevisi methl sticky="we" in yane lable ke 4 soton ra eshghal karde az chap tarin ta rast tarin ghesmat an 4 soton keshide savad
+lbl.grid(columnspan=4,sticky="we")
 
 btn1=Button(text="1",font=("times new roman",14,"bold"),fg="#0091FF",width=5,height=2,command=lambda:func("1")).grid(row=2,column=0)
 
@@ -61,7 +60,7 @@ btnplus=Button(text="+",font=("times new roman",14,"bold"),fg="#0091FF",width=5,
 btnsub=Button(text="-",font=("times new roman",14,"bold"),fg="#0091FF",width=5,height=2,command=lambda:sign("-")).grid(row=5,column=3)
 
 btnc=Button(text="c",font=("times new roman",14,"bold"),fg="#0091FF",width=5,height=2,command=lambda:equation.set("")).grid(row=1,column=2)
-\
+
 btnpried=Button(text=".",font=("times new roman",14,"bold"),fg="#0091FF",width=5,height=2,command=lambda:sign(".")).grid(row=5,column=0)
 
 btnpower=Button(text="x²",font=("times new roman",14,"bold"),fg="#0091FF",width=5,height=2,command=lambda:equation.set(equation.get()+"**2")).grid(row=1,column=0)
